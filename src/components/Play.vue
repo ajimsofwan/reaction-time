@@ -1,7 +1,7 @@
 <template>
   <section class="text-center bg-rose-500">
-    <div class="py-32 md:py-60">
-      <div class="flex justify-center animate-bounce">
+    <div class="py-32 xxl:py-60">
+      <div class="flex justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-36 text-slate-100" viewBox="0 0 512 512">
           <circle cx="256" cy="256" r="32" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
           <circle cx="416" cy="256" r="32" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
