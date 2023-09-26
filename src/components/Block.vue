@@ -1,6 +1,18 @@
 <script setup>
-defineProps(['score'])
+import { onMounted, ref } from 'vue';
 
+const props = defineProps(['score']);
+const rank = ref(null);
+
+onMounted(() => {
+  if (props.score?.value < 250) {
+    rank.value = "Ninja Fingers.";
+  } else if (props.score?.value < 350) {
+    rank.value = "Rapid Reflexes.";
+  } else {
+    rank.value = "Snail Pace...";
+  }
+});
 </script>
 <template>
   <section class="text-center bg-emerald-500">
@@ -13,7 +25,8 @@ defineProps(['score'])
             d="M256 128v144h96" />
         </svg>
       </div>
-      <h1 class="pb-16 text-6xl font-semibold md:text-8xl text-slate-100">{{ score }} ms</h1>
+      <h1 class="pb-5 text-6xl font-semibold md:text-8xl text-slate-100">{{ score }}ms</h1>
+      <p class="pb-1 text-4xl font-semibold text-white">{{ rank }}</p>
       <p class="text-2xl font-semibold text-white">Click to keep going.</p>
     </div>
     <div v-else class="py-32 xxl:py-60">
