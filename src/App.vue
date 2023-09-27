@@ -36,7 +36,7 @@ function toggleModal() {
   <Play v-if="isPlay && !showClick" />
   <Click v-if="showClick" @end="endGame" />
   <Modal v-if="showModal" title="Game Info" @modal="toggleModal">
-    <p class="mb-3 font-normal text-slate-700 dark:text-slate-400">This is a simple tool to measure your reaction time.
+    <p class="mb-3 font-normal text-slate-700 dark:text-slate-400">This is a simple game to measure your reaction time.
     </p>
     <p class="mb-3 font-normal text-slate-700 dark:text-slate-400">In addition to measuring your reaction time, this test
       is affected by the latency of your computer and monitor.
